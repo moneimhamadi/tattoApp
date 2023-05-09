@@ -16,6 +16,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     public List<Product> findAllByStockIdAndExiryAtBetween(Long stockId, Date startDate, Date endDate);
     public List<Product> findAllByBarcode(String barcode);
     public Product findFirstByBarcode(String barcode);
+    public Product findFirstByBarcodeAndStockId(String barcode,Long stockId);
 
 
 }

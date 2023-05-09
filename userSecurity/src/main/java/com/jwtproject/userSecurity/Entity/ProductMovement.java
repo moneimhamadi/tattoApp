@@ -22,9 +22,9 @@ public class ProductMovement implements Serializable {
 	private String description;
 	private double prixUnitaire;
 	private int quantity;
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date createdAt;
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date exiryAt;
 	private boolean fExpired;
 	private int maxQuantity;

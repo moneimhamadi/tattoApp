@@ -93,7 +93,7 @@ public class ReservationServiceImpl implements ReservationService {
 	    reservation.setQuantityPrduct((long) 1);
 
 	    Reservation savedReservation = reservationRepository.save(reservation);
-	    Product reservedProduct = productRepository.findFirstByBarcode(barcodeProduct);
+	    Product reservedProduct = productRepository.findFirstByBarcodeAndStockId(barcodeProduct,idBoutique);
 	    reservedProduct.setQuantity(reservedProduct.getQuantity() - 1);
 	    productRepository.save(reservedProduct);
 

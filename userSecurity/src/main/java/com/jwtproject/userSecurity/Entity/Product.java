@@ -23,9 +23,9 @@ public class Product implements Serializable {
 	private String description;
 	private double prixUnitaire;
 	private int quantity;
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
 	private Date createdAt;
-    @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date exiryAt;
 	private boolean fExpired;
 	private int maxQuantity;
